@@ -10,6 +10,9 @@ jokes = [
     "Why was the computer cold? It left its Windows open.",
     "Parallel lines have so much in common… it’s a shame they’ll never meet."
 ]
+@app.route('/')
+def home():
+    return "Welcome to the Joke API! Visit /joke to get a random joke."
 
 @app.route('/joke', methods=['GET'])
 def get_joke():
